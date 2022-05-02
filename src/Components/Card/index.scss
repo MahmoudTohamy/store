@@ -1,0 +1,64 @@
+/** @format */
+@import "../../Styles/common.scss";
+.card-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  //   width: 30%;
+  padding: 16px;
+  position: relative;
+  margin-right: 30px;
+  width: 386px;
+  height: 444px;
+  cursor: pointer;
+  &--disable {
+    cursor: not-allowed;
+  }
+  &__outOfStock {
+    width: 386px;
+    height: 330px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #ffffff;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include fontStyle(24px, 400, #8d8f9a);
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    svg {
+      position: absolute;
+      bottom: 87px;
+      right: 25px;
+      display: none;
+      z-index: 30;
+    }
+  }
+
+  img {
+    width: 386px;
+    height: 338px;
+    object-fit: contain;
+  }
+  span {
+    margin-top: 24px;
+    @include fontStyle(18px, 400, #1d1f22);
+    display: block;
+  }
+  label {
+    @include fontStyle(18px, 500, #1d1f22);
+  }
+  &:hover {
+    box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+    svg {
+      display: inline;
+    }
+  }
+}

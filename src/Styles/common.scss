@@ -1,0 +1,7 @@
+/** @format */
+
+@mixin fontStyle($size, $wight, $color) {
+  font-size: $size;
+  font-weight: $wight;
+  color: $color;
+}

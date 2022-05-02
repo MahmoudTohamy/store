@@ -1,0 +1,17 @@
+/** @format */
+@import "../../Styles/common.scss";
+.home-cont {
+  h4 {
+    text-align: left;
+    text-transform: capitalize;
+    @include fontStyle(42px, 400, #1d1f22);
+  }
+  &__cards-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.disable-scroll {
+  overflow-y: hidden !important;
+}

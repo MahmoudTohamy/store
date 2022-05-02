@@ -1,0 +1,143 @@
+/** @format */
+@import "../../Styles/common.scss";
+.header-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  &__shadow {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 80px);
+    top: 80px;
+    left: 0;
+    z-index: 5;
+    background: rgba(57, 55, 72, 0.22);
+  }
+  &__link {
+    @include fontStyle(16px, 600, #1d1f22);
+    margin-right: 32px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    &--selectedCategory {
+      color: #5ece7b !important;
+      border-bottom: 1px solid #5ece7b;
+    }
+    &:hover {
+      color: #5ece7b;
+      border-bottom: 1px solid #5ece7b;
+    }
+  }
+  &__cart-currency {
+    position: relative;
+    display: flex;
+    &__currency {
+      margin-right: 10px;
+      cursor: pointer;
+      &__symbol {
+        @include fontStyle(25px, 600, #1d1f22);
+      }
+      &__arrow {
+        margin-bottom: 4px;
+      }
+      &__dropDown {
+        z-index: 6;
+        position: absolute;
+
+        width: 114px;
+        height: fit-content;
+        background-color: #ffffff;
+        right: -25px;
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(148, 140, 148, 0.45);
+        -moz-box-shadow: 0px 0px 3px 0px rgba(148, 140, 148, 0.45);
+        box-shadow: 0px 0px 3px 0px rgba(148, 140, 148, 0.45);
+        &--hidden {
+          display: none;
+        }
+        div {
+          text-align: left;
+          white-space: nowrap;
+          cursor: pointer;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include fontStyle(18px, 400, #1d1f22);
+          &:hover {
+            background: #eeeeee;
+          }
+        }
+      }
+    }
+    &__cart {
+      margin-top: 16px;
+      width: 20px;
+      height: 20px;
+      position: relative;
+
+      svg {
+        cursor: pointer;
+      }
+      &__counter {
+        @include fontStyle(14px, 700, #ffffff);
+        position: absolute;
+        background: #1d1f22;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        top: -10px;
+        left: 9px;
+      }
+
+      &__dropDown {
+        max-height: 677px;
+        overflow-y: auto !important;
+        z-index: 6;
+        position: absolute;
+        right: -104px;
+        width: 325px;
+        padding: 5px 16px;
+        background-color: #ffffff;
+        top: 47.75px;
+        text-align: left;
+        &--hidden {
+          display: none;
+        }
+        &__total-price {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 25px;
+          @include fontStyle(16px, 700, #1d1f22);
+        }
+        &__footer {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 35px;
+          margin-bottom: 20px;
+          button {
+            width: 140px;
+            height: 43px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          }
+          &__view-bag {
+            background: #ffffff;
+            border: 1px solid #1d1f22 !important;
+            box-sizing: border-box;
+            @include fontStyle(16px, 600, #1d1f22);
+          }
+          &__check-out {
+            background: #5ece7b;
+            @include fontStyle(16px, 600, #ffffff);
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

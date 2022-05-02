@@ -1,0 +1,28 @@
+/** @format */
+@import "../../Styles/common.scss";
+.cart-cont {
+  h2 {
+    text-align: left;
+  }
+  &__price-info {
+    text-align: left;
+    border-top: 1px solid #e5e5e5;
+    span {
+      @include fontStyle(24px, 500, #1d1f22);
+      display: block;
+    }
+    span:nth-child(3) {
+      margin-top: 24px;
+    }
+    button {
+      cursor: pointer;
+      width: 279px;
+      height: 43px;
+      border: none;
+      outline: none;
+      @include fontStyle(14px, 600, #ffffff);
+      background: #5ece7b;
+      margin: 16px 0px;
+    }
+  }
+}
